@@ -1,4 +1,4 @@
-Go Ascension
+# Go Ascension
 
 This repo is used for pure learning and documentation purposes in my eternal Go ascension journey.
 
@@ -16,4 +16,8 @@ At the moment I am not a developer but a mere enthusiast of the Go programming l
 
 Hope to be playing around this repo whenever trying something with Go.
 
+
+## Excercism
+
+## Data Structures And Algorithms
 
