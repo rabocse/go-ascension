@@ -79,11 +79,37 @@ func TestOvenTime(t *testing.T) {
 }
 ```
 
-The above test used by Excercism raised multiple questions around testing for me, so I will go through the "testing documentation" to clarify those. For example:
+The above test used by Excercism raised multiple questions around testing for me, so I will go through the "testing documentation" to clarify those. For example: Why t.Run is used? 
 
-Why t.Run is used? 
+-------------------------------------------------------------
+
+### t.Run
+---
+I found t.Run in the Go documentation under the section listed as "Subtests and Subenchmarks"
 
 https://pkg.go.dev/testing#hdr-Subtests_and_Sub_benchmarks
+
+- It allows defining subtests and sub-benchmarks, without having to define separate functions for each.
+- This enables uses like table-driven benchmarks and creating hierarchical tests. 
+- It also provides a way to share common setup and tear-down code. For example:
+
+```go
+func TestFoo(t *testing.T) {
+    // <setup code>
+    t.Run("A=1", func(t *testing.T) { ... })
+    t.Run("A=2", func(t *testing.T) { ... })
+    t.Run("B=1", func(t *testing.T) { ... })
+    // <tear-down code>
+}
+```
+
+- ___Table-driven tests:___ Instead of mantaining separate test functions, we can build a "table" of input and the corresponding output we expect, then use a single test function to check each entry in the table.
+	There is no standard format for the table, ut one common solution is to define a new type, specifically for use in your tests, that holds the input and expected outut for each test.  (Definition taken from "Head First Go" book)
+
+- Notice how each t.Run can run a specific test.
+
+
+... to be continued...
 
 
 
