@@ -108,10 +108,31 @@ func TestFoo(t *testing.T) {
 
 - Notice how each t.Run can run a specific test.
 
+---
+## First Attempt of lasagna_test.go
+--- 
 
-... to be continued...
+It seems my first tests are working fine. Here are the PASS results:
 
+```go
 
+λ go test -v
+=== RUN   TestOvenTime
+--- PASS: TestOvenTime (0.00s)
+=== RUN   TestRemainingOvenTime
+--- PASS: TestRemainingOvenTime (0.00s)
+=== RUN   TestPreparationTime
+--- PASS: TestPreparationTime (0.00s)
+=== RUN   TestElapseTime
+--- PASS: TestElapseTime (0.00s)
+PASS
+ok      github.com/rabocse/go-ascension/excercism/concept/lasagna       0.137s
+
+```
+
+Tried to break the logic over the lasagna.go and got the respective FAIL messages.
+
+I will try to refactor it, at this point it looks quite repetitive.
 
 
 
