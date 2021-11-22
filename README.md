@@ -19,7 +19,7 @@ At the moment I am not a developer but a mere enthusiast of the Go programming l
 Hope to be playing around this repo whenever trying something with Go.
 
 
-## Excercism
+## Exercism
 
 Going through the Go track from Excercism.
 
