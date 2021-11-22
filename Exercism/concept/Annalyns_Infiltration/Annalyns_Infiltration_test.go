@@ -22,7 +22,7 @@ func TestCanFastAttack(t *testing.T) {
 	}
 
 	if got := CanFastAttack(tt.knightIsAwake); got != tt.expected {
-		t.Errorf("CanFastAttack(%d) = %d; but the expected is %d", tt.knightIsAwake, got, tt.expected)
+		t.Errorf("CanFastAttack(%v) = %v; but the expected is %v", tt.knightIsAwake, got, tt.expected)
 	}
 
 }
@@ -39,7 +39,7 @@ func TestCanSpy(t *testing.T) {
 	}
 
 	if got := CanSpy(tt.knightIsAwake, tt.archerIsAwake, tt.prisonerIsAwake); got != tt.expected {
-		t.Errorf("CanSpy(%d, %d, %d) = %d; but the expected is %d", tt.knightIsAwake, tt.archerIsAwake, tt.prisonerIsAwake, got, tt.expected)
+		t.Errorf("CanSpy(%v, %v, %v) = %v; but the expected is %v", tt.knightIsAwake, tt.archerIsAwake, tt.prisonerIsAwake, got, tt.expected)
 	}
 
 }
@@ -56,7 +56,7 @@ func TestCanSignalPrisoner(t *testing.T) {
 	}
 
 	if got := CanSignalPrisoner(tt.prisonerIsAwake, tt.archerIsAwake); got != tt.expected {
-		t.Errorf("CanSignalPrisoner(%d, %d) = %d; but the expected is %d", tt.prisonerIsAwake, tt.archerIsAwake, got, tt.expected)
+		t.Errorf("CanSignalPrisoner(%v, %v) = %v; but the expected is %v", tt.prisonerIsAwake, tt.archerIsAwake, got, tt.expected)
 	}
 
 }
@@ -74,6 +74,6 @@ func TestCanFreePrisoner(t *testing.T) {
 	}
 
 	if got := CanFreePrisoner(tt.knightIsAwake, tt.archerIsAwake, tt.prisonerIsAwake, tt.dogIsWithAnnalyn); got != tt.expected {
-		t.Errorf("CanFreePrisoner(%d, %d) = %d; but the expected is %d", tt.archerIsAwake, tt.dogIsWithAnnalyn, got, tt.expected)
+		t.Errorf("CanFreePrisoner(%v, %v) = %v; but the expected is %v", tt.archerIsAwake, tt.dogIsWithAnnalyn, got, tt.expected)
 	}
 }
